@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import ImgLogo from '../../img/logo.svg';
 import ImgAccount from '../../img/account.svg';
+import Link from '../link/Link.component';
 
 const HeaderContainer = styled.header`
   max-width: 1000px;
@@ -50,18 +51,20 @@ const Header: React.FC = () => {
       <div className="menu">
         <ul>
           <li>
-            <a href="#">Equipment</a>
+            <Link href="#">Equipment</Link>
           </li>
           <li>
-            <a href="#">About us</a>
+            <Link href="#">About us</Link>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <Link href="#">Blog</Link>
           </li>
         </ul>
       </div>
       <div className="account">
-        <img src={ImgAccount} alt="Account" />
+        <Link href="#">
+          <img src={ImgAccount} alt="Account" />
+        </Link>
       </div>
     </HeaderContainer>
   );

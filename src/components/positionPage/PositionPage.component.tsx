@@ -1,32 +1,34 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const PositionPageContainer = styled.div``;
+interface SliderIndicatorProps {
+  position: number;
+}
 
 const SliderBG = styled.div`
   height: 434px;
   width: 3px;
   background-color: #ffffff;
   opacity: 0.5;
-  margin: 0 30px;
   position: relative;
 `;
 
-const SliderIndicator = styled.div`
+const SliderIndicator = styled.div<SliderIndicatorProps>`
   height: 20%;
   width: 3px;
   background-color: #fbd784;
   position: absolute;
-  top: 20%;
+
+  ${(props) => css`
+    top: ${props.position}%;
+  `}
 `;
 
 const PositionPage: React.FC = () => {
   return (
-    <PositionPageContainer>
-      <SliderBG>
-        <SliderIndicator />
-      </SliderBG>
-    </PositionPageContainer>
+    <SliderBG>
+      <SliderIndicator position={0} />
+    </SliderBG>
   );
 };
 

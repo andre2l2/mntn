@@ -36,6 +36,12 @@ const HomeTextContainer = styled.div`
 
     p:last-child {
       cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 20px;
+      }
     }
 
     p:nth-child(2) {
@@ -84,7 +90,7 @@ const HomeTextContainer = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: absolute;
+      position: fixed;
       left: 0;
 
       span {
@@ -102,6 +108,10 @@ const HomeTextContainer = styled.div`
 
     .slider {
       display: block;
+
+      position: fixed;
+      right: 15px;
+      transform: translate(-100%);
     }
   }
 `;
