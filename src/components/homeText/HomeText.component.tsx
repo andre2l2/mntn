@@ -25,16 +25,9 @@ const HomeTextContainer = styled.div`
   }
 
   .home-text {
-    p:first-child,
     p:last-child {
+      color: #ffffff;
       font-size: 15px;
-    }
-
-    p:first-child {
-      color: #fbd784;
-    }
-
-    p:last-child {
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -46,9 +39,6 @@ const HomeTextContainer = styled.div`
 
     p:nth-child(2) {
       margin: 10px 0;
-    }
-
-    p {
       color: #ffffff;
       font-size: 30px;
     }
@@ -74,12 +64,6 @@ const HomeTextContainer = styled.div`
         font-size: 60px;
       }
 
-      p:first-child {
-        display: flex;
-        align-items: center;
-      }
-
-      p:first-child,
       p:last-child {
         font-size: 20px;
       }
@@ -129,9 +113,7 @@ const HomeText: React.FC = () => {
         </a>
       </div>
       <div className="home-text">
-        <p className="bold">
-          <TextLine />A HIKING GUIDE
-        </p>
+        <TextLine text="A HIKING GUIDE" />
         <p>Be prepared for the Mountains and beyond!</p>
         <p className="bold">
           scroll down <img src={IconArrowDown} alt="Arrow down" />
