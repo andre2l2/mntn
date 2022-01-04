@@ -10,6 +10,7 @@ const LinkStyled = styled.a`
   position: relative;
   transition: 0.2s;
   background: transparent;
+  color: #ffffff;
 
   &::after {
     background-color: #fbd784;

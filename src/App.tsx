@@ -9,7 +9,7 @@ import Footer from './components/footer/Footer.component';
 const Container = styled.section`
   width: 100%;
   min-height: 100vh;
-  background-color: #354147;
+  background-color: #0b1d26;
 `;
 
 const App: React.FC = () => {
