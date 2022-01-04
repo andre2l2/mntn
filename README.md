@@ -11,3 +11,9 @@ How to install
 npm install
 npm run start
 ```
+
+## Image Web Site
+
+<p align="center">
+    <img src="./public/example.png">
+</p>
