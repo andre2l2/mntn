@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import ImgLogo from '../../img/logo.svg';
 
 import Link from '../link/Link.component';
+import packageJSON from '../../../package.json';
 
 const FooterContainer = styled.footer`
   max-width: 1000px;
@@ -93,6 +94,9 @@ const FooterContainer = styled.footer`
 `;
 
 const Footer: React.FC = () => {
+  const [year] = useState(new Date().getFullYear());
+  const [version] = useState(packageJSON.version);
+
   return (
     <FooterContainer>
       <div className="footer-title">
@@ -117,7 +121,9 @@ const Footer: React.FC = () => {
           <Link href="#">Press</Link>
         </div>
       </div>
-      <p className="copyright">Copyright 2019 MNTN, Inc. Terms & Privacy</p>
+      <p className="copyright">
+        Copyright {year} MNTN, Inc. Terms & Privacy v{version}
+      </p>
     </FooterContainer>
   );
 };
