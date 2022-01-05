@@ -9,7 +9,6 @@ import TextLine from '../TextLine/textLine.component';
 import PositionPage from '../positionPage/PositionPage.component';
 
 const HomeTextContainer = styled.div`
-  width: 240px;
   height: 80vh;
   display: flex;
   justify-content: space-between;
@@ -25,6 +24,9 @@ const HomeTextContainer = styled.div`
   }
 
   .home-text {
+    width: 300px;
+    margin: 0 auto;
+
     p:last-child {
       color: #ffffff;
       font-size: 15px;

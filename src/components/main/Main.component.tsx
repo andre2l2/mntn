@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import TextLine from '../TextLine/textLine.component';
+
 import Img01 from '../../img/ex1.png';
 import Img02 from '../../img/ex2.png';
 import Img03 from '../../img/ex3.png';
@@ -9,6 +11,7 @@ interface ImageAndTextProps {
   title: string;
   text: string;
   image: string;
+  colorText: string;
   isInverted?: boolean;
 }
 
@@ -26,6 +29,8 @@ const MainContainer = styled.main<MainContainerProps>`
     align-items: center;
 
     .text {
+      width: 266px;
+
       p,
       h1 {
         width: 266px;
@@ -33,11 +38,10 @@ const MainContainer = styled.main<MainContainerProps>`
       }
 
       h1 {
-        margin-top: 20px;
+        margin: 20px 0;
       }
 
       p {
-        margin: 20px 0 0 0;
         line-height: 28px;
         text-align: justify;
       }
@@ -45,6 +49,7 @@ const MainContainer = styled.main<MainContainerProps>`
 
     img {
       width: 266px;
+      margin-bottom: 24px;
     }
   }
 
@@ -62,6 +67,8 @@ const MainContainer = styled.main<MainContainerProps>`
             `}
 
       .text {
+        width: auto;
+
         p,
         h1 {
           width: 466px;
@@ -83,11 +90,12 @@ const MainContainer = styled.main<MainContainerProps>`
   }
 `;
 
-const ImageAndText: React.FC<ImageAndTextProps> = ({ title, text, image, isInverted }) => {
+const ImageAndText: React.FC<ImageAndTextProps> = ({ title, text, image, isInverted, colorText }) => {
   return (
     <MainContainer isInverted={isInverted}>
       <div className="infos">
         <div className="text">
+          <TextLine text={colorText} />
           <h1>{title}</h1>
           <p>{text}</p>
         </div>
@@ -109,6 +117,7 @@ const Main: React.FC = () => {
             Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert
             backpacker?"
         image={Img01}
+        colorText="GET STARTED"
       />
       <ImageAndText
         title="Picking the right Hiking Gear!?"
@@ -116,6 +125,7 @@ const Main: React.FC = () => {
               away with things you already have. Let’s start with clothing. A typical mistake hiking beginners make is 
               wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet."
         image={Img02}
+        colorText="HIKING ESSENTIALS"
         isInverted
       />
       <ImageAndText
@@ -124,6 +134,7 @@ const Main: React.FC = () => {
               guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I
               hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction.."
         image={Img03}
+        colorText="WHERE YOU GO IS THE KEY"
       />
     </>
   );
