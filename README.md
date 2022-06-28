@@ -12,7 +12,7 @@ npm install
 npm run start
 ```
 
-## Image Web Site
+## Demo Web Site
 
 <p align="center">
     <img src="./public/example-2.gif">
