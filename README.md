@@ -15,5 +15,5 @@ npm run start
 ## Image Web Site
 
 <p align="center">
-    <img src="./public/example.png">
+    <img src="./public/example-2.gif">
 </p>
