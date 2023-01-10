@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Footer from './components/footer/Footer.component';
 import Header from './components/header/Header.compomemt';
 import HomeText from './components/homeText/HomeText.component';
 import Main from './components/main/Main.component';
-import Footer from './components/footer/Footer.component';
 
 const Container = styled.section`
   width: 100%;

@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import IconArrowDown from '../../icons/arrow_down.svg';
 import IconInstagram from '../../icons/instagram.svg';
 import IconTwitter from '../../icons/twitter.svg';
+import bgImage from '../../img/bg-image.jpg';
 
-import TextLine from '../TextLine/textLine.component';
 import PositionPage from '../positionPage/PositionPage.component';
+import TextLine from '../TextLine/textLine.component';
 
 const HomeTextContainer = styled.div`
   height: 80vh;
@@ -14,6 +15,10 @@ const HomeTextContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
+  background-image: url(${bgImage});
+  background-size: cover;
+  background-position-y: 100%;
 
   .social-midia {
     display: none;

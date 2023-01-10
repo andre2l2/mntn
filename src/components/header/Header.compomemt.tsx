@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ImgLogo from '../../img/logo.svg';
 import ImgAccount from '../../img/account.svg';
+import ImgLogo from '../../img/logo.svg';
 import Link from '../link/Link.component';
 
 const HeaderContainer = styled.header`
